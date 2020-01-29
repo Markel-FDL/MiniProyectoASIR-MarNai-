@@ -19,6 +19,8 @@ Vagrant.configure("2") do |config|
       ip: "10.1.209.180",
       netmask: "255.255.0.0",
       virtualbox__intnet: "intnet"
+	  
+  config.vm.provision "shell", path: "./script/web_error404_errorLOG.sh"
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
